@@ -1,0 +1,25 @@
+{
+  "name": "gemstone",
+  "version": "1.0.0",
+  "description": "GeMSToNe ========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gemston-ua/gemstone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gemston-ua/gemstone/issues"
+  },
+  "homepage": "https://github.com/gemston-ua/gemstone#readme",
+  "dependencies": {
+    "bower": "^1.7.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
