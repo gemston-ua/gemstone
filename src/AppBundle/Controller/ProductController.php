@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -22,5 +23,13 @@ class ProductController extends Controller
         $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findAll();
 
         return new JsonResponse(['products' => $products]);
+    }
+
+    /**
+     * @Route("/{id}", name="products_show", requirements={"id" = "\d+"})
+     */
+    public function showAction(Product $product)
+    {
+        return new JsonResponse($product);
     }
 }

@@ -1,6 +1,7 @@
 var
     gulp = require('gulp'),
-    del = require('del')
+    del = require('del'),
+    concatJs = require('gulp-concat')
     ;
 
 gulp.task('clean', function () {
@@ -10,6 +11,19 @@ gulp.task('clean', function () {
     ]);
 });
 
-gulp.task('default', ['clean'],  function() {
+gulp.task('react', function() {
+    return gulp.src([
+            'bower_components/react/react.min.js',
+            'bower_components/react/react-dom.min.js'
+        ])
+        .pipe(concatJs('app.js'))
+        .pipe(gulp.dest('web/js/'));
+});
 
+gulp.task('default', ['clean'],  function() {
+    var tasks = ['react'];
+
+    tasks.forEach(function (val) {
+        gulp.start(val);
+    });
 });

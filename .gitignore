@@ -7,7 +7,9 @@
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
+/web/js
 !app/cache/.gitkeep
+/bower_components
 /app/logs/*
 !app/logs/.gitkeep
 /app/phpunit.xml
