@@ -17,7 +17,7 @@ class ProductController extends Controller
      * @Route("/", name="products_list")
      * @Method({"GET"})
      */
-    public function listAction(Request $request)
+    public function listAction()
     {
         $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findAll();
 
