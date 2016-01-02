@@ -2,4 +2,4 @@ AppBundle\Entity\Product:
     product{1..10}:
         title: <name()>
         description: <text()>
-        categories: 5x @category*
+        categories(unique): 5x @category*

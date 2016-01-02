@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ProductRepository")
  */
-class Product
+class Product implements \JsonSerializable
 {
     /**
      * @var int
@@ -177,5 +177,20 @@ class Product
     {
         return $this->categories;
     }
-}
 
+    /**
+     * {@inheritdoc}
+     */
+    function jsonSerialize()
+    {
+        return [
+            'id' => $this->getId(),
+            'title' => $this->getTitle(),
+            'description' => $this->getDescription(),
+            'image' => $this->getImage(),
+            'categories' => $this->getCategories()->map(function (Category $category) {
+                return $category->getId();
+            })->getValues(),
+        ];
+    }
+}
