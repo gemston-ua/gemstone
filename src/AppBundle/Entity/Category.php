@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 /**
  * Category
@@ -14,6 +15,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Category implements \JsonSerializable
 {
+    use TimestampableEntity;
+
     /**
      * @var int
      *
