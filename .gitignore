@@ -8,6 +8,8 @@
 /app/bootstrap.php.cache
 /app/cache/*
 /web/js
+/web/fonts
+/web/images
 /web/css
 !app/cache/.gitkeep
 /bower_components

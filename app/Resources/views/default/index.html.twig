@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
-{% endblock stylesheets %}
-
-{% block body %}
-    <div id="container"></div>
-{% endblock %}
-
-{% block javascripts %}
-    <script src="{{ asset('js/app.js') }}"></script>
+{% block content %}
+    {% for product in products %}
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <h1>{{ product.title }}</h1>
+                <hr>
+                {{ product.description }}
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}

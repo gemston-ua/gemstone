@@ -7,7 +7,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route("/products")
@@ -22,7 +21,7 @@ class ProductController extends Controller
     {
         $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findAll();
 
-        return new JsonResponse(['products' => $products]);
+        return ['products' => $products];
     }
 
     /**
