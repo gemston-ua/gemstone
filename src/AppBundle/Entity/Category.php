@@ -82,8 +82,6 @@ class Category implements \JsonSerializable
         return $this->title;
     }
 
-    /*---------------------------------------------------------------------------*/
-
     /**
      * @param Product $product
      * @return $this
@@ -126,6 +124,8 @@ class Category implements \JsonSerializable
         return [
             'id' => $this->getId(),
             'title' => $this->getTitle(),
+            'createdAt' => $this->getCreatedAt()->format('c'),
+            'updatedAt' => $this->getUpdatedAt()->format('c'),
         ];
     }
 }

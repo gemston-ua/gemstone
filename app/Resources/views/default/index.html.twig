@@ -1,18 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <div id="example"></div>
-{% endblock %}
-
 {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
+{% endblock stylesheets %}
+
+{% block body %}
+    <div id="container"></div>
 {% endblock %}
 
 {% block javascripts %}
     <script src="{{ asset('js/app.js') }}"></script>
-    <script>
-        ReactDOM.render(
-                React.createElement('h1', null, 'Hello, world!'),
-                document.getElementById('example')
-        );
-    </script>
 {% endblock %}

@@ -145,8 +145,6 @@ class Product implements \JsonSerializable
         return $this->image;
     }
 
-    /*--------------------------------------------------------------------------------------------------------*/
-
     /**
      * @param Category $category
      * @return $this
