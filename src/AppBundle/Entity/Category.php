@@ -119,7 +119,7 @@ class Category implements \JsonSerializable
     /**
      * {@inheritdoc}
      */
-    function jsonSerialize()
+    public function jsonSerialize()
     {
         return [
             'id' => $this->getId(),
@@ -127,5 +127,10 @@ class Category implements \JsonSerializable
             'createdAt' => $this->getCreatedAt()->format('c'),
             'updatedAt' => $this->getUpdatedAt()->format('c'),
         ];
+    }
+
+    public function __toString()
+    {
+        return $this->getTitle();
     }
 }

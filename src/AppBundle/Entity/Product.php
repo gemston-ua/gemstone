@@ -182,7 +182,7 @@ class Product implements \JsonSerializable
     /**
      * {@inheritdoc}
      */
-    function jsonSerialize()
+    public function jsonSerialize()
     {
         return [
             'id' => $this->getId(),
@@ -195,5 +195,10 @@ class Product implements \JsonSerializable
             'createdAt' => $this->getCreatedAt()->format('c'),
             'updatedAt' => $this->getUpdatedAt()->format('c'),
         ];
+    }
+
+    public function __toString()
+    {
+        return $this->getTitle();
     }
 }

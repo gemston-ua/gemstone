@@ -17,5 +17,9 @@
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.6"
+  },
+  "devDependencies": {
+    "html5shiv": "~3.7.3",
+    "respond": "~1.4.2"
   }
 }

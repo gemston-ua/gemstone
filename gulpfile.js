@@ -27,10 +27,20 @@ gulp.task('scss', function () {
 
 gulp.task('app-js', function () {
     return gulp.src([
+        'bower_components/jquery/dist/jquery.min.js',
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
         'web-src/js/*.js'
     ])
         .pipe(concat('app.js'))
+        .pipe(gulp.dest('web/js/'));
+});
+
+gulp.task('ie-js', function () {
+    return gulp.src([
+        'bower_components/html5shiv/dist/html5shiv.js',
+        'bower_components/respond/dest/respond.src.js'
+    ])
+        .pipe(concat('ie.js'))
         .pipe(gulp.dest('web/js/'));
 });
 
@@ -42,6 +52,14 @@ gulp.task('src-js', function () {
 });
 
 gulp.task('fonts', function () {
+    return gulp.src([
+        'bower_components/bootstrap-sass/assets/fonts/*',
+        'web-src/fonts/*'
+    ])
+        .pipe(gulp.dest('web/fonts'))
+});
+
+gulp.task('style-fixes', function () {
     return gulp.src([
         'bower_components/bootstrap-sass/assets/fonts/*',
         'web-src/fonts/*'
