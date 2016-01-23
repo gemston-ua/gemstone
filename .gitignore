@@ -1,3 +1,4 @@
+/node_modules
 /app/config/parameters.yml
 /bin/
 /build/
@@ -6,8 +7,12 @@
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
+/web/js
+/web/fonts
+/web/images
+/web/css
 !app/cache/.gitkeep
-/app/config/parameters.yml
+/bower_components
 /app/logs/*
 !app/logs/.gitkeep
 /app/phpunit.xml

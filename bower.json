@@ -1,0 +1,25 @@
+{
+  "name": "gemstone",
+  "description": "GeMSToNe ========",
+  "main": "index.js",
+  "authors": [
+    "Alex Moshta <ahonymous@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gemston-ua/gemstone",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  },
+  "devDependencies": {
+    "html5shiv": "~3.7.3",
+    "respond": "~1.4.2"
+  }
+}
